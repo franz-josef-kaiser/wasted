@@ -39,6 +39,22 @@ component::mysql::databases:
 # component::standalone_app::prefix: api  # results in proxy from $vhost/api to localhost:$port
 # component::standalone_app::path: /var/www/app_name/static
 
+
+## nginx (sendfile is turned of in dev)
+nginx::manage_repo: false
+
+
+## apt
+apt::always_apt_update: true
+apt::purge_sources_list: false
+apt::purge_sources_list_d: false
+apt::purge_preferences_d: false
+
+
+## hhvm
+hhvm::config::port: 9090  # make sure that hhvm and php5-fpm ports don't collide
+
+
 ## php
 php::extensions:
   curl: {}

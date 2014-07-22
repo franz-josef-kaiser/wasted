@@ -16,8 +16,8 @@ main() {
     echo "[bootstrap] link .vagrant to project root" && \
         ln -si vagrant/.vagrant $DIR/../.vagrant &&
         (mkdir vagrant/.vagrant 2>/dev/null || true)
-    echo "[bootstrap] create devstack.yaml in project root" && \
-        cp -i $DIR/devstack.yaml.dist $DIR/../devstack.yaml
+    echo "[bootstrap] create configs and basic hierarchy" && \
+        cp -Ri $DIR/vagrant-cfg.dist $DIR/../vagrant-cfg
 }
 
 main
