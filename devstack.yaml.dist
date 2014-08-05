@@ -19,6 +19,7 @@ profile::app::symfony2: true
 profile::app::php_vhost: false
 profile::app::standalone_app: false
 profile::app::zend_framework1: false
+profile::app::yii2: false
 
 ## mysql
 component::mysql::root_password: root
