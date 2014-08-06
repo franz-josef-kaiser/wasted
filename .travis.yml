@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 1.9.3
+
+before_install:
+  - sudo apt-get update -q
+
+install:
+  - sudo wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
+  - sudo dpkg -i vagrant_*.deb
+script:
+  - sudo vagrant
